@@ -1,0 +1,118 @@
+$text-color-lighter: #292929
+$blue: #254bca
+$blue-lighter: #476dec
+$black: #101010
+$white: #f0f0f0
+
+body
+  margin: 0
+  padding: 0
+  font-family: arial
+  background-color: $white
+  color: $black
+
+header
+  text-align: center
+  background-color: $blue
+  color: $white
+  padding: 0.5rem 0
+  font-variant: small-caps
+  font-weight: 700
+  margin-bottom: 0.5rem
+
+button
+  margin: 1rem
+  padding: 0.75rem 1.25rem 1rem
+  font-variant: small-caps
+  font-size: 1.175rem
+  background-color: $blue
+  color: white
+  border: none
+  border-radius: 4px
+  cursor: pointer
+  min-width: 95px
+
+button:active
+  background-color: $blue-lighter
+
+/**** LAYOUT ****/
+
+.main-container
+  min-height: 100vh
+  max-width: 1200px
+  min-width: 260px
+  display: flex
+  flex-direction: column
+  margin: 0 auto
+
+.top-row
+  flex: 1
+  display: flex
+
+.player-container
+  flex: 1
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.middle-row
+  flex: 2
+  display: flex
+  flex-direction: column
+  justify-content: space-evenly
+  align-items: center
+
+.result-container
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.bottom-row
+  flex: 2
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+
+.panel-row
+  display: flex
+  justify-content: space-evenly
+
+.panel-button
+  border: solid 2px
+  margin: 0.25rem
+  flex: 1
+  text-align: center
+  font-variant: small-caps
+  font-weight: 700
+  cursor: pointer
+
+/**** TYPOGRAPHY ****/
+
+.label
+  font-weight: 700
+  color: $text-color-lighter
+  font-variant: small-caps
+  margin-bottom: 1rem
+  text-align: center
+
+.value
+  font-size: 1.25rem
+
+.round-display
+  font-size: 1.5rem
+
+// @media ( max-width: 260px )
+//   .control-container
+//     display: flex
+//     flex-direction: column
+
+/* Stop the game stretching too wide */
+
+@media ( min-width: 600px )
+  .main-container
+    min-height: calc(100vh - 2rem)
+    max-width: 500px
+    border: solid 2px
+    margin: 1rem auto
